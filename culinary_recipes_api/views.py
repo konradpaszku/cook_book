@@ -3,14 +3,17 @@ from culinary_recipes.models import Recipe, Ingredient
 from .serializers import IngredientSerializer, RecipeSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
 
 
 class IngredientList(generics.ListCreateAPIView):
+    permission_classes = (IsAuthenticated,)
     queryset = Ingredient.objects.all()
     serializer_class = IngredientSerializer
 
 
 class IngredientDetail(APIView):
+    permission_classes = (IsAuthenticated,)
     def get(self, request, ing_id):
         try:
             query = Ingredient.objects.get(pk=ing_id)
@@ -21,11 +24,13 @@ class IngredientDetail(APIView):
 
 
 class RecipeList(generics.ListCreateAPIView):
+    permission_classes = (IsAuthenticated,)
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
 
 
 class RecipeDetail(APIView):
+    permission_classes = (IsAuthenticated,)
     def get(self, request, rec_id):
         try:
             query = Recipe.objects.get(pk=rec_id)
