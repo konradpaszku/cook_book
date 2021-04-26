@@ -1,0 +1,11 @@
+{% extends "culinary_recipes/base.html" %}
+
+{% block content %}
+
+<div>
+      <h1 class="display-3">{{ recipe }}</h1>
+
+      {{ recipe.context }}
+Ingredients: {{ recipe.ingredients.all|join:", " }}
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "culinary_recipes/base.html" %}
+
+{% block page_header %}
+
+  <div class="jumbotron">
+{% for ingredient in ingredients %}
+      <p class="lead">{{ ingredient.name }}</p>{% endfor %}
+</div>
+
+{% endblock page_header %}

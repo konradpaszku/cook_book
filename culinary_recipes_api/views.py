@@ -4,12 +4,13 @@ from .serializers import IngredientSerializer, RecipeSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
-
+import django_filters.rest_framework
 
 class IngredientList(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated,)
     queryset = Ingredient.objects.all()
     serializer_class = IngredientSerializer
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
 
 
 class IngredientDetail(APIView):
@@ -27,6 +28,7 @@ class RecipeList(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated,)
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
 
 
 class RecipeDetail(APIView):
