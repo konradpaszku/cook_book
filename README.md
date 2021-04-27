@@ -9,7 +9,6 @@ In order to initialize the database for the project, go into the cookbook direct
 
 To run the project type in python manage.py runserver
 
-To check the JWT authentication and endpoints you have to make admin account, type to terminal 'python manage.py createsuperuser' and follow the instructions.
 
 To get JWT you have to do these steps:
 Go to http://127.0.0.1:8000/api/token/ and log in as admin and then browser will show you access and refresh token.
