@@ -1,13 +1,13 @@
 {% extends "culinary_recipes/base.html" %}
 
 {% block page_header %}
-{% for recipe in recipes %}
+{% for recipe in sort_recipe_by_id %}
   <div class="jumbotron">
       <h1 class="display-3">{{ recipe }}</h1>
 
       <p class="lead">{{ recipe.context|truncatechars:100 }} </p>
 
-    <a class="btn btn-lg btn-primary" href="{% url 'culinary_recipes:recipe' recipe.id %}" role="button">Read More! &raquo;</a>
+    <a class="btn btn-lg btn-primary" href="{% url 'culinary_recipes:recipe' recipe.id %}" role="button">Sign Up! &raquo;</a>
 </div>
 {% endfor %}
 {% endblock page_header %}

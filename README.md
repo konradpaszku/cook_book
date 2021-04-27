@@ -14,15 +14,15 @@ To check the JWT authentication and endpoints you have to make admin account, ty
 To get JWT you have to do these steps:
 Go to http://127.0.0.1:8000/api/token/ and log in as admin and then browser will show you access and refresh token.
 Now you can go to the home page http://127.0.0.1:8000/ and turn on postman app.
-In postman app put the token in authorization as bearer token
-After this you can add some data by admin or by DRF and check the endpoints, you have only 1 min then you will lose you permission and you will have to make authorization once again.
-
+In postman app put the token in authorization as bearer token.
+You have only 1 min then you will lose you permission and you will have to make authorization once again.<br />
+I added sqlite to github page for some examples, and log in as superuser : login: 'user' password :'admin'. <br />
 URLs to check endpoints:
 
-http://127.0.0.1:8000/ <- browser show all recipes in database<br />
-http://127.0.0.1:8000/id <- browser show you one specific recipe<br />
-http://127.0.0.1:8000/ingredients/ <- browser show all ingredients in database<br />
-http://127.0.0.1:8000/ingredients/id <- browser show you one specific ingredient<br />
+http://127.0.0.1:8000/api/ <- browser show all recipes in database<br />
+http://127.0.0.1:8000/api/id <- browser show you one specific recipe<br />
+http://127.0.0.1:8000/api/ingredients/ <- browser show all ingredients in database<br />
+http://127.0.0.1:8000/api/ingredients/id <- browser show you one specific ingredient<br />
 The id must be the integer.
 
 

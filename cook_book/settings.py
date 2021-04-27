@@ -29,14 +29,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #defaultapps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #myapps
     'culinary_recipes',
     'culinary_recipes_api',
+    #app from other companies
     'rest_framework',
     'django_filters',
     'bootstrap4',

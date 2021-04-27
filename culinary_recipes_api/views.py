@@ -6,6 +6,7 @@ from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 import django_filters.rest_framework
 
+
 class IngredientList(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated,)
     queryset = Ingredient.objects.all()
@@ -15,6 +16,7 @@ class IngredientList(generics.ListCreateAPIView):
 
 class IngredientDetail(APIView):
     permission_classes = (IsAuthenticated,)
+
     def get(self, request, ing_id):
         try:
             query = Ingredient.objects.get(pk=ing_id)
@@ -33,6 +35,7 @@ class RecipeList(generics.ListCreateAPIView):
 
 class RecipeDetail(APIView):
     permission_classes = (IsAuthenticated,)
+
     def get(self, request, rec_id):
         try:
             query = Recipe.objects.get(pk=rec_id)

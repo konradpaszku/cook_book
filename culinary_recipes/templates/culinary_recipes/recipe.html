@@ -6,6 +6,6 @@
       <h1 class="display-3">{{ recipe }}</h1>
 
       {{ recipe.context }}
-Ingredients: {{ recipe.ingredients.all|join:", " }}
+      <p><h3>Ingredients:</h3> {{ recipe.ingredients.all|join:", " }}</p>
 </div>
 {% endblock %}
